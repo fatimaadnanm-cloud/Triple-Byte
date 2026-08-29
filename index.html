@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Perfect Day</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home Page -->
+    <div id="home">
+        <h1>My Perfect Day</h1>
+        <p>
+            Everyone has a different idea of a perfect day. 
+            Let's find one that works for everyone.
+        </p>
+        <button onclick="start()">Start</button>
+    </div>
+
+    <!-- Number of People -->
+    <div id="people-step" style="display:none;">
+        <label for="people">How many people are planning?</label>
+        <input type="number" id="people" min="1" max="10" placeholder="Enter Number">
+        <button onclick="next()">Next</button>
+    </div>
+
+    <!-- Name Entry -->
+    <div id="name-step" style="display:none;">
+        <h2 id="name-heading">Participant 1</h2>
+        <label for="name-input">What's your name?</label>
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button onclick="submitName()">Continue</button>
+    </div>
+
+    <!-- Preferences -->
+    <div id="preferences" style="display:none;">
+        <h2 id="person-heading">Person 1</h2>
+
+        <h3>Choose your food</h3>
+        <button class="option-btn" data-category="food">Pizza</button>
+        <button class="option-btn" data-category="food">Burger</button>
+        <button class="option-btn" data-category="food">Sushi</button>
+        <button class="option-btn" data-category="food">Salad</button>
+
+        <h3>Choose your activity</h3>
+        <button class="option-btn" data-category="activity">Hiking</button>
+        <button class="option-btn" data-category="activity">Movies</button>
+        <button class="option-btn" data-category="activity">Bowling</button>
+        <button class="option-btn" data-category="activity">Swimming</button>
+
+        <h3>Choose your mood</h3>
+        <button class="option-btn" data-category="mood">Relaxed</button>
+        <button class="option-btn" data-category="mood">Energetic</button>
+        <button class="option-btn" data-category="mood">Adventurous</button>
+        <button class="option-btn" data-category="mood">Chill</button>
+
+        <h3>Choose your budget</h3>
+        <button class="option-btn" data-category="budget">Low</button>
+        <button class="option-btn" data-category="budget">Medium</button>
+        <button class="option-btn" data-category="budget">High</button>
+
+        <br><br>
+        <button onclick="nextPerson()">Next Person</button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" style="display:none;">
+        <h1>Perfect Day</h1>
+        <p id="result-intro">We found something you all have in common!</p>
+        
+        <div class="result-box">
+            <h2>Food</h2>
+            <p id="food-result">Food will appear here</p>
+        </div>
+
+        <div class="result-box">
+            <h2>Activity</h2>
+            <p id="activity-result">Activity will appear here</p>
+        </div>
+
+        <div class="result-box">
+            <h2>Mood</h2>
+            <p id="mood-result">Mood will appear here</p>
+        </div>
+
+        <div class="result-box">
+            <h2>Budget</h2>
+            <p id="budget-result">Budget will appear here</p>
+        </div>
+
+        <button onclick="restart()">Make Another Day</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
