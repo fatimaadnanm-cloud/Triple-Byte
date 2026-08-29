@@ -1,0 +1,184 @@
+/* ---------- RESET & GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d6c3b0; /* cream background */
+  color: #523636; /* dark brown text */
+  font-family: 'Sansation', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+  font-family: 'Matemasie', cursive;
+  font-size: 3rem;
+  color: #2A3244; /* deep blue for main titles */
+  margin: 20px 0;
+}
+
+h2 {
+  font-family: 'Sansation', sans-serif;
+  font-size: 1.8rem;
+  color: #523636;
+  margin: 15px 0;
+}
+
+h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 1.5rem;
+  color: #523636;
+  margin: 20px 0 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+/* ---------- STEP CONTAINERS ---------- */
+div[id*="-step"],
+#home,
+#preferences,
+#result {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2); /* glassy effect */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#home {
+  background: rgba(255,255,255,0.3);
+  padding: 40px 30px;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  font-family: 'Sansation', sans-serif;
+  font-size: 1rem;
+  padding: 12px 28px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #523636;
+  color: #d6c3b0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2A3244;
+  color: #d6c3b0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button:focus {
+  outline: 2px solid #2A3244;
+  outline-offset: 2px;
+}
+
+/* ---------- OPTION BUTTONS (in preferences) ---------- */
+.option-btn {
+  background-color: #523636;
+  color: #d6c3b0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin: 5px;
+  min-width: 100px;
+}
+
+.option-btn:hover {
+  background-color: #2A3244;
+}
+
+/* Selected state – pops out */
+.option-btn.selected {
+  background-color: #2A3244; /* deep blue */
+  color: #d6c3b0; /* cream text */
+  border: 2px solid #d6c3b0;
+  box-shadow: 0 0 12px rgba(42,50,68,0.5);
+  transform: scale(1.05);
+}
+
+
+input {
+  width: 80%;
+  max-width: 300px;
+  padding: 12px 15px;
+  margin: 10px;
+  border: 2px solid #523636;
+  border-radius: 25px;
+  background: #d6c3b0;
+  color: #523636;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+
+input::placeholder {
+  color: #523636;
+  opacity: 0.7;
+}
+
+input:focus {
+  border-color: #2A3244;
+  box-shadow: 0 0 8px rgba(42,50,68,0.3);
+}
+
+
+.result-box {
+  background: #d6c3b0;
+  border: 2px solid #523636;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 400px;
+}
+
+.result-box h2 {
+  font-family: 'Chewy', cursive;
+  color: #2A3244;
+  margin-bottom: 5px;
+}
+
+.result-box p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+
+#home, #people-step, #name-step, #preferences, #result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+
+@media (max-width: 600px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  button { width: 100%; max-width: 250px; }
+  input { width: 90%; }
+}
